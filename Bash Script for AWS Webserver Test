@@ -1,0 +1,8 @@
+#!/bin/bash
+#Update server, install httpd apache, and create test page.
+
+yum update -y
+yum install -y httpd
+systemctl start httpd
+ststemctl enable httpd
+echo "<html><body><h1>Hello, welcome to my Red Team Project Page</h1></body></html>" > /var/www/index.html
